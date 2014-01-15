@@ -54,7 +54,9 @@ class analyze:
 
     def check_logs()
        subprocess.cal(["logconv.pl","-V","" % instance
-
+       logs = subprocess.Popen(["logvonv.pl", "-V", "/etc/dirsrv/%s" % instance ], stdout=subprocess.PIPE)
+       output,  = logs.communicate()
+       return logs
 
     def get_instance()                   
         """need to determine the instance name either through input or code"""
@@ -64,13 +66,3 @@ class analyze:
         isdir(join(dirsrvpath,d))
 
 
-
-import subprocess
-p = subprocess.Popen("date", stdout=subprocess.PIPE, shell=True)
-(output, err) = p.communicate()
-print "Today is", output
-
-import subprocess
-p = subprocess.Popen(["ls", "-l", "/etc/resolv.conf"], stdout=subprocess.PIPE)
-output, err = p.communicate()
-print "*** Running ls -l command ***\n", output
