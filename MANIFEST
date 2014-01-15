@@ -2,3 +2,4 @@
 README.txt
 setup.py
 reviewdirsrv/__init__.py
+reviewdirsrv/summarize.py
