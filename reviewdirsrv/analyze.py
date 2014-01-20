@@ -29,32 +29,25 @@ pathname = sys.arg[1]
 print pathname
 '''
 
-def usage():
-    print """Usage: sumarize [--init, -i|--check, -ch|--clean, -cl]
-    --init, -i          
-
-    Examples:
-
-       Initialize:
-
-"""
 class analyze:
 
-    def __init__(self):
+    def __init__(self, args):
         
+        self.args = args
         self.hostname = self.readhostname() 
         variables = analyze()
         self.dirsrvpath = /etc/dirsrv
+
 
     def _env_settings()
         
 
     def readhostname():
-
-        hostname = os.path.join(self.pathname,'hostname')
-        hstnm = open('hostname', 'r')
-        name = hstnm.read()
-        print "the hostname is = %s" % name
+        try:
+            hostname = os.path.join(self.pathname,'hostname')
+            hstnm = open('hostname', 'r')
+            name = hstnm.read()
+            print "the hostname is = %s" % name
 
     def check_logs()
        subprocess.cal(["logconv.pl","-V","" % instance

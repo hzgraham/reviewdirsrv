@@ -16,6 +16,12 @@
 
 import argparse
 
+def usage():
+    print """Usage: sumarize [--init, -i|--check, -ch|--clean, -cl]
+    --init, -i  Examples:   Initialize:
+          """
+
+
 class Parser()
     def __init__(self)
         self.parser = argparse.ArguementParser(description='analyse sosreport')

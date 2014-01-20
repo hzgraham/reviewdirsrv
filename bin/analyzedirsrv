@@ -19,7 +19,7 @@ import reviewdirsrv, Perser
 def main():
     parser = reviewdirsrv.Parser.Parser()
     args = parser.parser.parse_args()
-
+    args.j(args)
 
 if __name__ == '__main__':
     main()

@@ -17,7 +17,7 @@
 
 import sys, os, subprocess
 import reviewdirsrv.analyze
-
+from reviewdirsrv.analyze import analyze as a
 """
 need to differentiate between IPA and a stand alone 389 Directory Server
 """
@@ -31,12 +31,7 @@ pathname = sys.arg[1]
 print pathname
 '''
 
-def usage():
-    print """Usage: sumarize [--init, -i|--check, -ch|--clean, -cl]
-    --init, -i          
 
-    Examples:
 
-       Initialize:
-
-"""
+def check(args)
+    check = a(args)
