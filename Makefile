@@ -1,7 +1,7 @@
 #!/usr/bin/make
 
 install: setup.py
-	python setup.py
+	python setup.py install
 
 rpm: rpmcommon
 	@rpmbuild --define "_topdir %(pwd)/rpm-build" \
